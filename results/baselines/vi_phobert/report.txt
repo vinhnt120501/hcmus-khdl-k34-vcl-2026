@@ -1,0 +1,17 @@
+model=vinai/phobert-base
+train_silver=6728
+eval_gold_vi=400
+
+              precision    recall  f1-score   support
+
+        DYNA     0.5319    0.6250    0.5747        40
+         EVT     0.3448    0.4286    0.3822        70
+         LOC     0.5896    0.6870    0.6345       115
+         PER     0.7613    0.8223    0.7906       287
+         TIT     0.2526    0.4752    0.3299       101
+
+   micro avg     0.5443    0.6819    0.6054       613
+   macro avg     0.4960    0.6076    0.5424       613
+weighted avg     0.5827    0.6819    0.6247       613
+
+Micro-F1=0.6054

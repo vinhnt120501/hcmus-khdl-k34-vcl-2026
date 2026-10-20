@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+.env
+corpus/
+results/audit/
+results/canonicalization/
+.DS_Store

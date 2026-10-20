@@ -1,0 +1,9 @@
+{
+  "model_id": "gemini-2.5-flash",
+  "api_key_env": "GEMINI_API_KEY",
+  "temperature": 0.1,
+  "batch_size": 20,
+  "workers": 16,
+  "rpm": 4000,
+  "tpm": 4000000
+}

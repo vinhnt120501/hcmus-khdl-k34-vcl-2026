@@ -1,0 +1,17 @@
+model=SIKU-BERT/sikuroberta
+train_silver_sentences=6729
+eval_gold_zh_sentences=400
+
+              precision    recall  f1-score   support
+
+        DYNA     0.7857    0.7097    0.7458        31
+         EVT     0.4186    0.4337    0.4260        83
+         LOC     0.6940    0.8017    0.7440       116
+         PER     0.6703    0.7316    0.6996       339
+         TIT     0.4219    0.5745    0.4865       141
+
+   micro avg     0.5926    0.6761    0.6316       710
+   macro avg     0.5981    0.6502    0.6204       710
+weighted avg     0.6004    0.6761    0.6346       710
+
+Micro-F1=0.6316
