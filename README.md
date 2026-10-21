@@ -65,12 +65,13 @@ Input (pair `3-2`):
 
 LLM output (one JSON record per pair):
 
-| | Chinese | Vietnamese |
-|---|---|---|
-| PER | 神農氏, 帝明, 鶩僊女, 涇陽王 | Thần Nông thị, Đế Minh, Vụ Tiên, Kinh Dương Vương |
-| LOC | 百粤 | Bách Việt |
-| Triples | (帝明, descendant_of, 神農氏); (帝明, spouse_of, 鶩僊女); (帝明, father_of, 涇陽王); (涇陽王, other_relation, 百粤) | same four triples on the Vietnamese side |
-| Links (confidence) | 神農氏↔Thần Nông thị (1.0); 帝明↔Đế Minh (1.0); 鶩僊女↔Vụ Tiên (0.90); 涇陽王↔Kinh Dương Vương (1.0); 百粤↔Bách Việt (1.0) | |
+<table>
+  <tr><th></th><th>Chinese</th><th>Vietnamese</th></tr>
+  <tr><td>PER</td><td>神農氏, 帝明, 鶩僊女, 涇陽王</td><td>Thần Nông thị, Đế Minh, Vụ Tiên, Kinh Dương Vương</td></tr>
+  <tr><td>LOC</td><td>百粤</td><td>Bách Việt</td></tr>
+  <tr><td>Triples</td><td>(帝明, descendant_of, 神農氏); (帝明, spouse_of, 鶩僊女); (帝明, father_of, 涇陽王); (涇陽王, other_relation, 百粤)</td><td>same four triples on the Vietnamese side</td></tr>
+  <tr><td>Links (confidence)</td><td colspan="2">神農氏↔Thần Nông thị (1.0); 帝明↔Đế Minh (1.0); 鶩僊女↔Vụ Tiên (0.90); 涇陽王↔Kinh Dương Vương (1.0); 百粤↔Bách Việt (1.0)</td></tr>
+</table>
 
 Output after canonicalization (global integer ids; Vietnamese ids start at 14,719):
 

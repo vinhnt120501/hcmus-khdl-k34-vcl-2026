@@ -65,12 +65,13 @@ xem mục 4).
 
 Đầu ra của LLM (một bản ghi JSON cho mỗi cặp):
 
-| | Chữ Hán | Tiếng Việt |
-|---|---|---|
-| PER | 神農氏, 帝明, 鶩僊女, 涇陽王 | Thần Nông thị, Đế Minh, Vụ Tiên, Kinh Dương Vương |
-| LOC | 百粤 | Bách Việt |
-| Bộ ba | (帝明, descendant_of, 神農氏); (帝明, spouse_of, 鶩僊女); (帝明, father_of, 涇陽王); (涇陽王, other_relation, 百粤) | cùng bốn bộ ba ở phía tiếng Việt |
-| Liên kết (độ tin) | 神農氏↔Thần Nông thị (1.0); 帝明↔Đế Minh (1.0); 鶩僊女↔Vụ Tiên (0.90); 涇陽王↔Kinh Dương Vương (1.0); 百粤↔Bách Việt (1.0) | |
+<table>
+  <tr><th></th><th>Chữ Hán</th><th>Tiếng Việt</th></tr>
+  <tr><td>PER</td><td>神農氏, 帝明, 鶩僊女, 涇陽王</td><td>Thần Nông thị, Đế Minh, Vụ Tiên, Kinh Dương Vương</td></tr>
+  <tr><td>LOC</td><td>百粤</td><td>Bách Việt</td></tr>
+  <tr><td>Bộ ba</td><td>(帝明, descendant_of, 神農氏); (帝明, spouse_of, 鶩僊女); (帝明, father_of, 涇陽王); (涇陽王, other_relation, 百粤)</td><td>cùng bốn bộ ba ở phía tiếng Việt</td></tr>
+  <tr><td>Liên kết (độ tin)</td><td colspan="2">神農氏↔Thần Nông thị (1.0); 帝明↔Đế Minh (1.0); 鶩僊女↔Vụ Tiên (0.90); 涇陽王↔Kinh Dương Vương (1.0); 百粤↔Bách Việt (1.0)</td></tr>
+</table>
 
 Đầu ra sau canonicalization (id số nguyên toàn cục; id tiếng Việt bắt đầu từ 14,719):
 
