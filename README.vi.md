@@ -1,11 +1,25 @@
 [English](README.md) | **Tiếng Việt**
 
-# Mã nguồn bài VCL2026
+# Tài nguyên thực thể định danh Hán–Việt cho *Đại Việt Sử Ký Toàn Thư*
 
-Mã nguồn kèm bài *LLM-Based Named-Entity Recognition and Knowledge Graph Construction for
-Sino-Vietnamese Feudal History*. Mã tái lập toàn bộ quy trình và các con số ở Mục 3–4 của bài:
-trích xuất bằng Gemini 2.5 Flash, canonicalization, audit gold-free, đánh giá trên gold
-3 người gán, capture–recapture, baseline có giám sát và các phép chấm của chuyên gia.
+Tài nguyên thực thể định danh và đồ thị tri thức song ngữ cho lịch sử phong kiến Việt Nam, xây
+dựng từ bộ sử song ngữ chữ Hán – tiếng Việt *Đại Việt Sử Ký Toàn Thư* (20,867 cặp câu đã gióng
+hàng). Mỗi phía được gán 5 loại thực thể (người, địa danh, chức danh, sự kiện, triều đại) cùng
+quan hệ giữa chúng, và hai phía được nối bằng liên kết liên ngôn ngữ như 黎利 ↔ Lê Lợi.
+
+Tài nguyên được trích xuất bằng mô hình ngôn ngữ lớn (Gemini 2.5 Flash), kiểm chứng không cần gold
+(cấu trúc, lược đồ, từ điển âm Hán–Việt, nhất quán song ngữ), rồi đối chiếu với mẫu gold do ba
+người gán nhãn.
+
+**Điểm chính**
+
+- 14,719 thực thể chữ Hán và 14,094 thực thể tiếng Việt, 11,666 / 11,698 bộ ba quan hệ, 12,353 liên kết liên ngôn ngữ một–một.
+- Nhận diện thực thể: micro F1 0.937 so với gold, recall ước lượng 0.982 (cận trên).
+- Liên kết liên ngôn ngữ: precision 0.953 trên các liên kết không theo phiên âm; lớp quan hệ ở mức khám phá (precision bộ ba 0.735).
+- Mọi con số trong bài đều tái lập được bằng các lệnh bên dưới.
+
+Bài báo: *LLM-Based Named-Entity Recognition and Knowledge Graph Construction for Sino-Vietnamese
+Feudal History*, Hội thảo Quốc gia lần thứ 4 về Ngôn ngữ học Tính toán (VCL 2026).
 
 ## 1. Tổng quan
 
@@ -274,3 +288,14 @@ Ghi chú:
 | `prompts/ner_with_relations.md` | Prompt trích xuất đầy đủ, nguyên văn bản đã chạy |
 | `results/` | Kết quả đánh giá NER và baseline của bài (chỉ số liệu); kết quả chạy lại cũng ghi vào đây (đổi bằng `VCL_RESULTS_DIR`) |
 | `docs/figures/` | Hình 1–4 của bài dùng trong README này |
+
+## 7. Trích dẫn
+
+```bibtex
+@inproceedings{nguyen2026sinovietkg,
+  title     = {{LLM}-Based Named-Entity Recognition and Knowledge Graph Construction for Sino-Vietnamese Feudal History},
+  author    = {Nguyen, Thanh Vinh},
+  booktitle = {Proceedings of the 4th National Workshop on Computational Linguistics (VCL 2026)},
+  year      = {2026}
+}
+```

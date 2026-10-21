@@ -1,12 +1,25 @@
 **English** | [Tiếng Việt](README.vi.md)
 
-# Code for the VCL2026 paper
+# Sino-Vietnamese Named-Entity Resource for *Đại Việt Sử Ký Toàn Thư*
 
-Code accompanying the paper *LLM-Based Named-Entity Recognition and Knowledge Graph Construction
-for Sino-Vietnamese Feudal History*. It reproduces the whole pipeline and every number in
-Sections 3–4 of the paper: extraction with Gemini 2.5 Flash, canonicalization, the gold-free
-audit, evaluation against a three-annotator gold, capture–recapture, the supervised baselines,
-and the expert judgments.
+A bilingual named-entity and knowledge-graph resource for Vietnamese feudal history, built from the
+Classical Chinese – Vietnamese chronicle *Đại Việt Sử Ký Toàn Thư* (20,867 aligned sentence pairs).
+Each side is labeled with five entity types (person, location, title, event, dynasty) and their
+relations, and the two sides are joined by cross-lingual links such as 黎利 ↔ Lê Lợi.
+
+The resource is extracted with a large language model (Gemini 2.5 Flash) and checked without a
+gold standard (structure, schema, a Sino-Vietnamese reading dictionary, bilingual consistency),
+then against a three-annotator gold sample.
+
+**Highlights**
+
+- 14,719 Chinese and 14,094 Vietnamese entities, 11,666 / 11,698 relation triples, 12,353 one-to-one cross-lingual links.
+- Entity recognition: micro F1 0.937 against human gold, estimated recall 0.982 (upper bound).
+- Cross-lingual links: 0.953 precision on non-phonetic links; relations are an exploratory layer (triple precision 0.735).
+- Every number in the paper can be reproduced with the commands below.
+
+Paper: *LLM-Based Named-Entity Recognition and Knowledge Graph Construction for Sino-Vietnamese
+Feudal History*, the 4th National Workshop on Computational Linguistics (VCL 2026).
 
 ## 1. Overview
 
@@ -280,3 +293,14 @@ Code comments and console output are in Vietnamese.
 | `prompts/ner_with_relations.md` | Full extraction prompt, verbatim as run |
 | `results/` | The paper's NER and baseline results (numbers only); reruns also write here (change with `VCL_RESULTS_DIR`) |
 | `docs/figures/` | Figures 1–4 of the paper used in this README |
+
+## 7. Citation
+
+```bibtex
+@inproceedings{nguyen2026sinovietkg,
+  title     = {{LLM}-Based Named-Entity Recognition and Knowledge Graph Construction for Sino-Vietnamese Feudal History},
+  author    = {Nguyen, Thanh Vinh},
+  booktitle = {Proceedings of the 4th National Workshop on Computational Linguistics (VCL 2026)},
+  year      = {2026}
+}
+```
